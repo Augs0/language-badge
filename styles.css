@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&family=Sora&display=swap");
+
+:root {
+	--primary: #f1faee;
+	--secondary: #1d3557;
+	--accent: #e63946;
+	--accent-two: #a8dadc;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	background-color: var(--primary);
+	color: var(--secondary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Sora", sans-serif;
+}
+
+p,
+a,
+li,
+span,
+label,
+input {
+	font-family: "Raleway", sans-serif;
+}
+
+/*  Header styles */
+header {
+	padding: 10px;
+}
+
+.mainhead {
+	border-bottom: solid 3px var(--accent);
+	width: 500px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+/* Options styles */
+.options, .preview {
+	font-size: 1.5em;
+	display: flex;
+	flex-direction: column;
+	max-width: 300px;
+	flex-wrap: wrap;
+	margin: 0 auto;
+}
+
+.options .info {
+	font-size: 0.8em;
+	margin-bottom: 10px;
+}
+
+.options input {
+	margin: 10px;
+}
+
+.options label {
+	padding-bottom: 10px;
+}
+
+.options input[type="text"],
+.options select {
+	padding: 10px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+}
+
+/* preview */
+.preview{
+    margin-top:20px;
+}
+
+#preview-badge{
+    background-color:transparent;
+    border:black 1px solid;
+    padding:10px;
+    margin:10px;
+    border-radius:5px;;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    -ms-border-radius:5px;
+    -o-border-radius:5px;
+}
+
+/* Badge styling */
+.badge-wrapper{
+    padding:10px;
+    border-radius:5px;;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    -ms-border-radius:5px;
+    -o-border-radius:5px;
+    min-width:500px;
+    height:auto;
+    background:whitesmoke;
+    color:darkslategray;
+}
+
+.flag_img{
+    width:80px;
+    height:80px;
+    border:1px transparent solid;
+    margin:3px;
+    border-radius:20px;
+    -webkit-border-radius:20px;
+    -moz-border-radius:20px;
+    -ms-border-radius:20px;
+    -o-border-radius:20px;
+}
+
+/* Footer styles */
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100vw;
+	padding: 5px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design a language badge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="mainhead">Design your own language badge!</h1>
+    </header>
+
+    <main>
+        <div role="article" class="options">
+            <label for="name" class="name"> Name</label>
+            <input aria-label="Type your name" id="username" aria-labelledby="name" type="text"
+                placeholder="Enter your name" />
+            <label for="bg" name="bg">Background</label>
+            <input class="userbg" aria-label="Choose a background colour" aria-labelledby="bg" type="color" />
+            <label for="colour" name="colour">Text</label>
+            <input aria-label="Choose a text colour" class="usertext" aria-labelledby="colour" type="color" />
+            <label for="language">Languages to add</label>
+            <span role="text" class="info">Select a flag / flags to represent the language(s) you
+                speak</span>
+            <select aria-labelledby="languages" name="languages" id="languages">
+            </select>
+        </div>
+        <div role="article" class="preview">
+            <button type="button" id="preview-badge">See your badge!</button>
+            <div class="badge-wrapper">
+                <p> Hi my name is <span role="text" class="namebadge">[your name here]</span> and I speak</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Data gained from <a href="https://restcountries.eu/">REST Countries API</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
