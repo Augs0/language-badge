@@ -33,11 +33,15 @@ selector.addEventListener('change', (e) => {
 
 
 function grabFlag(alpha2Code) {
-    // selectedCountries = [];
+    const tracker = document.querySelector('.tracker');
     const info = countries.find(country => country.alpha2Code === alpha2Code);
     if (info && selectedCountries.includes(info) === false) {
         selectedCountries.push(info)
-        console.log(selectedCountries)
+    }
+    for (let i = 0; i < selectedCountries.length; i++) {
+        if (tracker.innerHTML.includes(selectedCountries[i].name) === false) {
+            tracker.innerHTML += ' ' + selectedCountries[i].name + ','
+        }
     }
 }
 
@@ -96,3 +100,8 @@ function grabHtml() {
 
     htmlWrapper.innerHTML = htmlcontent;
 }
+
+const refreshBtn = document.getElementById('refreshBtn');
+refreshBtn.addEventListener('click', () => {
+    location.reload();
+})

@@ -11,6 +11,7 @@
 <body>
     <header>
         <h1 class="mainhead">Design your own language badge!</h1>
+        <button id="refreshBtn" type="button">Start over!</button>
     </header>
 
     <main>
@@ -24,10 +25,11 @@
             <input aria-label="Choose a text colour" class="usertext" aria-labelledby="colour" type="color"
                 value="#ffffff" />
             <label for="language">Languages to add</label>
-            <span role="text" class="info">Select a flag / flags to represent the language(s) you
+            <span role="text" class="info">Select a country / countries to represent the language(s) you
                 speak</span>
             <select aria-labelledby="languages" name="languages" id="languages">
             </select>
+            <span class="tracker" role="text">You have already selected the following countries:</span>
         </div>
         <div role="article" class="preview">
             <button type="button" id="preview-badge">See your badge!</button>

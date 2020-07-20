@@ -40,6 +40,7 @@ input {
 /*  Header styles */
 header {
 	padding: 10px;
+	text-align:center;
 }
 
 .mainhead {
@@ -59,7 +60,7 @@ header {
 	margin: 0 auto;
 }
 
-.options .info {
+.options .info, .options .tracker {
 	font-size: 0.8em;
 	margin-bottom: 10px;
 }
@@ -75,6 +76,7 @@ header {
 .options input[type="text"],
 .options select {
 	padding: 10px;
+	margin:10px;
 	border-radius: 5px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -82,16 +84,17 @@ header {
 	-o-border-radius: 5px;
 }
 
+
 /* preview */
 .preview{
     margin-top:20px;
 }
 
-#preview-badge, #preview-html{
+#preview-badge, #preview-html, #refreshBtn{
     background-color:transparent;
     border:black 1px solid;
     padding:10px;
-    margin:10px;
+    margin:20px;
     border-radius:5px;;
     -webkit-border-radius:5px;
     -moz-border-radius:5px;
