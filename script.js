@@ -3,6 +3,7 @@ let selectedCountries = [];
 const preview = document.querySelector(".preview");
 const selector = document.getElementById('languages');
 
+
 fetch("https://restcountries.eu/rest/v2/all")
     .then(response => response.json())
     // .then(data => populateSelector(data))
@@ -29,7 +30,6 @@ selector.addEventListener('change', (e) => {
         countryOptions[i].selected = countryOptions[i].defaultSelected;
     }
 })
-
 
 
 function grabFlag(alpha2Code) {
@@ -67,5 +67,32 @@ function makeBadge(selectedCountries) {
     })
 }
 
+const htmlBtn = document.getElementById('preview-html');
+htmlBtn.addEventListener('click', () => {
+    grabHtml();
+})
 
+function grabHtml() {
+    const usercolour = document.querySelector('.userbg').value;
+    const usertext = document.querySelector('.usertext').value;
+    const htmlWrapper = document.querySelector('.html-wrapper');
+    const badgehtml = document.querySelector('.badge-wrapper').outerHTML;
+    const badgehtmlformatted = badgehtml.replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
+    let htmlcontent = `
+    <code>
+        //HTML <br/>
+        ${badgehtmlformatted}<br/><br/>
+        /* CSS */ </br>
+        padding:10px;<br/>
+        min-width:500px; /*container should be flex*/</br>
+        font-family: 'Raleway', sans-serif;
+        height:auto;</br>
+        border-radius:5px;</bR>
+        background-color:${usercolour};</br>
+        color:${usertext}; <br/>
+        </code>
+    `;
+
+    htmlWrapper.innerHTML = htmlcontent;
+}

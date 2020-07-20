@@ -50,11 +50,11 @@ header {
 }
 
 /* Options styles */
-.options, .preview {
+.options, .preview, .html {
 	font-size: 1.5em;
 	display: flex;
 	flex-direction: column;
-	max-width: 300px;
+	max-width: 400px;
 	flex-wrap: wrap;
 	margin: 0 auto;
 }
@@ -87,7 +87,7 @@ header {
     margin-top:20px;
 }
 
-#preview-badge{
+#preview-badge, #preview-html{
     background-color:transparent;
     border:black 1px solid;
     padding:10px;
@@ -102,15 +102,13 @@ header {
 /* Badge styling */
 .badge-wrapper{
     padding:10px;
-    border-radius:5px;;
+    border-radius:5px;
     -webkit-border-radius:5px;
     -moz-border-radius:5px;
     -ms-border-radius:5px;
     -o-border-radius:5px;
     min-width:500px;
     height:auto;
-    background:whitesmoke;
-    color:darkslategray;
 }
 
 .flag_img{
@@ -127,8 +125,6 @@ header {
 
 /* Footer styles */
 footer {
-	position: absolute;
-	bottom: 0;
-	width: 100vw;
+	width: 100%;
 	padding: 5px;
 }
